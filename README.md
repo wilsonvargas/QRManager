@@ -11,7 +11,7 @@ The second goal is to use the **ZXingScannerPage** class to get the information 
 
 The walkthrough below should help you, but you can also get in touch with me [@Wilson_VargasM](https://twitter.com/Wilson_VargasM)  I will be happy to help!
 
-###This sample requires either:
+### This sample requires either:
 
 - Visual Studio 2015 Update 2 (with Xamarin tools installed)
 - Xamarin Studio with either an Android or iOS phone
