@@ -16,6 +16,6 @@ The walkthrough below should help you, but you can also get in touch with me [@W
 - Visual Studio 2015 Update 2 (with Xamarin tools installed)
 - Xamarin Studio with either an Android or iOS phone
 
-### Demmo:
+### Demo:
 
 ![demo](https://media.giphy.com/media/3ohzdH1jijpzGUIVgs/giphy.gif)
