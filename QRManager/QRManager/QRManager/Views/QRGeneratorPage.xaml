@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:QRManager.Views;assembly=QRManager"
+             x:Class="QRManager.Views.QRGeneratorPage"
+             Title="Generator Page">
+    <ScrollView>
+        <StackLayout Padding="10">
+            <StackLayout>
+                <Entry x:Name="contentEntry" TextColor="Black"
+                       Placeholder="Texto" PlaceholderColor="Silver" 
+                       Keyboard="Text" FontSize="18" HorizontalTextAlignment="Start"/>
+                <Button Text="Generar QR" HorizontalOptions="FillAndExpand" BackgroundColor="#2196F3" TextColor="White" Clicked="Button_Clicked"/>
+            </StackLayout>
+            <local:QRResult x:Name="qrResult" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

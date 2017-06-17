@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QRManager.Views.MasterPage"
+             Padding="0,50,0,0"
+             Icon="menu.png"
+             Title="Menu"
+             BackgroundColor="#2196F3">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <StackLayout BackgroundColor="#2196F3"
+                     HeightRequest="20">
+
+                <Label Text="Menu"
+                 FontSize="20"
+                 VerticalOptions="CenterAndExpand"
+                 TextColor="White"
+                 HorizontalOptions="Center"/>
+            </StackLayout>
+            <ListView x:Name="navigationDrawerList"
+                  RowHeight="60"
+                  SeparatorVisibility="Default"
+                      BackgroundColor="WhiteSmoke"
+                      ItemsSource="{Binding Items}">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <!-- Main design for our menu items -->
+                            <StackLayout VerticalOptions="FillAndExpand"
+                             Orientation="Horizontal"
+                             Padding="20,10,0,10"
+                             Spacing="20">
+
+                                <Image Source="{Binding Icon}"
+                         WidthRequest="40"
+                         HeightRequest="40"
+                         VerticalOptions="Center" />
+
+                                <Label Text="{Binding Title}"
+                         FontSize="Medium"
+                         VerticalOptions="Center"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
