@@ -18,4 +18,4 @@ The walkthrough below should help you, but you can also get in touch with me [@W
 
 ### Demmo:
 
-![demo](https://giphy.com/gifs/3ohzdH1jijpzGUIVgs)
+![demo](https://media.giphy.com/media/3ohzdH1jijpzGUIVgs/giphy.gif)
