@@ -1,16 +1,16 @@
 ﻿using QRManager.Models;
 using QRManager.Views;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QRManager.ViewModels
 {
     public class MasterPageViewModel : ViewModelBase
     {
-        private List<MasterPageItem> _items;
+        public MasterPageViewModel()
+        {
+            Items = new List<MasterPageItem>();
+            Load();
+        }
 
         public List<MasterPageItem> Items
         {
@@ -18,11 +18,7 @@ namespace QRManager.ViewModels
             set { SetProperty(ref _items, value); }
         }
 
-        public MasterPageViewModel()
-        {
-            Items = new List<MasterPageItem>();
-            Load();
-        }
+        private List<MasterPageItem> _items;
 
         private void Load()
         {

@@ -15,7 +15,7 @@
                  FontSize="20"
                  VerticalOptions="CenterAndExpand"
                  TextColor="White"
-                 HorizontalOptions="Center"/>
+                 HorizontalOptions="Center" />
             </StackLayout>
             <ListView x:Name="navigationDrawerList"
                   RowHeight="60"
@@ -39,7 +39,7 @@
 
                                 <Label Text="{Binding Title}"
                          FontSize="Medium"
-                         VerticalOptions="Center"/>
+                         VerticalOptions="Center" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

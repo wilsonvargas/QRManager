@@ -6,8 +6,7 @@
              Title="Reader Page">
     <ScrollView>
         <StackLayout Padding="10" Orientation="Vertical">
-            <local:QRScanner x:Name="qrScanner"/>
+            <local:QRScanner x:Name="qrScanner" />
         </StackLayout>
-        
     </ScrollView>
 </ContentPage>
