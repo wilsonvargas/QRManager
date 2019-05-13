@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using QRManager.ViewModels;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZXing.Net.Mobile.Forms;
 
@@ -10,31 +11,15 @@ namespace QRManager.Views
         public QRReaderPage()
         {
             InitializeComponent();
-            Scan();
+            BindingContext = new QRReaderViewModel();
         }
 
-        private ZXingDefaultOverlay overlay;
-        private ZXingScannerView zxing;
-
-        private async void Scan()
+        private void ZXingScannerView_OnScanResult(ZXing.Result result)
         {
-            var scanPage = new ZXingScannerPage();
-
-            scanPage.OnScanResult += (result) =>
+            Device.BeginInvokeOnMainThread(() =>
             {
-                // Stop scanning
-                scanPage.IsScanning = false;
-
-                // Pop the page and show the result
-                Device.BeginInvokeOnMainThread(async () =>
-                {
-                    await Navigation.PopAsync();
-                    await DisplayAlert("Scanned Barcode", result.Text, "OK");
-                });
-            };
-
-            // Navigate to our scanner page
-            await Navigation.PushAsync(scanPage);
+                MessagingCenter.Send(result.Text, "ScanQRCode");
+            });
         }
     }
 }
