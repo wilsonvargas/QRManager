@@ -26,7 +26,7 @@ namespace QRManager.ViewModels
 
         private void GenerateQRCode()
         {
-            if (EntryContent == string.Empty)
+            if (EntryContent != string.Empty)
             {
                 TeamCode = EntryContent;
             }

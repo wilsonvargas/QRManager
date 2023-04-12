@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33130.400
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRManager.Android", "QRManager\QRManager.Android\QRManager.Android.csproj", "{8C6C2C38-BE1E-428E-8272-D20CC10E4B8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRManager", "QRManager\QRManager\QRManager.csproj", "{4C8D2DFC-DEF4-4C0F-A09D-FBCD0E4F5333}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QRManager", "QRManager\QRManager\QRManager.csproj", "{4C8D2DFC-DEF4-4C0F-A09D-FBCD0E4F5333}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRManager.UWP", "QRManager\QRManager.UWP\QRManager.UWP.csproj", "{630B9EB4-5793-488A-88D9-D36F9632AEB1}"
 EndProject
@@ -196,6 +196,7 @@ Global
 		{630B9EB4-5793-488A-88D9-D36F9632AEB1}.AppStore|x86.Build.0 = Release|x86
 		{630B9EB4-5793-488A-88D9-D36F9632AEB1}.AppStore|x86.Deploy.0 = Release|x86
 		{630B9EB4-5793-488A-88D9-D36F9632AEB1}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{630B9EB4-5793-488A-88D9-D36F9632AEB1}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{630B9EB4-5793-488A-88D9-D36F9632AEB1}.Debug|ARM.ActiveCfg = Debug|ARM
 		{630B9EB4-5793-488A-88D9-D36F9632AEB1}.Debug|ARM.Build.0 = Debug|ARM
 		{630B9EB4-5793-488A-88D9-D36F9632AEB1}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -254,5 +255,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {425BA78C-FA99-442C-AE4F-39FA422B2D15}
 	EndGlobalSection
 EndGlobal
