@@ -1,7 +1,8 @@
 ﻿using QRManager.ViewModels;
-using ZXing.Net.Mobile.Forms;
+using ZXing.Net.Maui;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
+using ZXing.Net.Maui.Controls;
 
 namespace QRManager.Views
 {
@@ -14,12 +15,15 @@ namespace QRManager.Views
             BindingContext = new QRReaderViewModel();
         }
 
-        private void ZXingScannerView_OnScanResult(ZXing.Result result)
+        private void ZXingScannerView_OnScanResult(object sender, BarcodeDetectionEventArgs e)
         {
-            Device.BeginInvokeOnMainThread(() =>
+            foreach (var barcode in e.Results) 
             {
-                MessagingCenter.Send(result.Text, "ScanQRCode");
-            });
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    MessagingCenter.Send(barcode.Value, "ScanQRCode");
+                });
+            }            
         }
     }
 }

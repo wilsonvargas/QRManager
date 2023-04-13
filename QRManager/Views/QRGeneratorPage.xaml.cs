@@ -1,6 +1,6 @@
 ﻿using QRManager.ViewModels;
 using System;
-using ZXing.Net.Mobile.Forms;
+using ZXing.Net.Maui;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 

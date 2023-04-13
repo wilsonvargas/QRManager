@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QRManager.Views.MasterPage"
              Padding="0,50,0,0"
-             Icon="menu.png"
+             IconImageSource="menu.png"
              Title="Menu"
              BackgroundColor="#2196F3">
     <ContentPage.Content>

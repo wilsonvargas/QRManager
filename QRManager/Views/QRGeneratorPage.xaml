@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
-             xmlns:zxcm="clr-namespace:ZXing.Common;assembly=zxing.portable"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
              x:Class="QRManager.Views.QRGeneratorPage"
              Title="Generator Page">
     <ScrollView>
@@ -14,15 +13,15 @@
                        Keyboard="Text" FontSize="18" HorizontalTextAlignment="Start" />
                 <Button Text="Generate QR Code" HorizontalOptions="FillAndExpand" BackgroundColor="#2196F3" TextColor="White" Command="{Binding GenerateQRCodeCommand}" />
             </StackLayout>
-            <zxing:ZXingBarcodeImageView
-                            BarcodeValue="{Binding TeamCode}"
-                            BarcodeFormat="QR_CODE"
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="FillAndExpand">
-                <zxing:ZXingBarcodeImageView.BarcodeOptions>
-                    <zxcm:EncodingOptions Width="200" Height="200" />
-                </zxing:ZXingBarcodeImageView.BarcodeOptions>
-            </zxing:ZXingBarcodeImageView>
+            <zxing:BarcodeGeneratorView
+                HeightRequest="200"
+                WidthRequest="200"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                ForegroundColor="Black"
+                Value="{Binding TeamCode}"
+                Format="QrCode"
+                Margin="3" />
         </StackLayout>
     </ScrollView>
 </ContentPage>
